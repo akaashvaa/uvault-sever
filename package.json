@@ -7,7 +7,12 @@
   "license": "MIT",
   "description": "server",
   "scripts": {
-    "start": "nodemon --no-deprecation index.js"
+    "start": "nodemon --no-deprecation index.js",
+    "pre-deploy": "node deleteLastDeploy.js",
+    "deploy": "npm run pre-deploy && now --public && now alias"
+  },
+  "engines": {
+    "node": ">=18.x"
   },
   "dependencies": {
     "cors": "^2.8.5",
