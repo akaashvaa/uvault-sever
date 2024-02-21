@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "env": {
+    "CORS_ORIGIN_ALLOW_ALL": "true"
+  }
 }
