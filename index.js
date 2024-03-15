@@ -21,7 +21,7 @@ app.use(
 )
 app.use(
   cors({
-    origin: 'https://uvault-phi.vercel.app/',
+    origin: 'https://uvault-phi.vercel.app',
   })
 )
 // createConnection()
