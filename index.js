@@ -10,7 +10,7 @@ import {
 import mongoose from 'mongoose'
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 // middlewares
 app.use(express.json())
@@ -21,7 +21,7 @@ app.use(
 )
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.CLIENT_URL,
   })
 )
 // createConnection()
