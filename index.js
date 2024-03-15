@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import dotenv from 'dotenv'
 import {
   savePost,
   getUserData,
@@ -8,6 +9,8 @@ import {
 } from './controller/index.route.js'
 
 import mongoose from 'mongoose'
+
+dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 5000
