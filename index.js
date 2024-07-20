@@ -23,11 +23,14 @@ app.use(
   })
 )
 app.use(
-  cors({
-    origin: process.env.CLIENT_URL,
-  })
+  cors()
 )
-// createConnection()
+// app.use(
+//   cors({
+//     origin: process.env.CLIENT_URL,
+//   })
+// )
+
 
 /**@abstract routes */
 app.get('/', (req, res) => {
